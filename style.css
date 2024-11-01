@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f3ec78, #af4261);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+
+.Container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 380px;
+    width: 100%;
+    padding: 30px 30px 15px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+.Container::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.Container::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+.Content{
+  color: #333;
+  position: relative;
+  font-size: 26px;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+.form{
+display: flex;
+flex-direction: column;
+text-align: left;
+position: relative;
+z-index: 1;
+gap: 14px;
+font-size: 15px;
+font-weight: bold;
+
+}
+h1{
+    margin-bottom: 36px;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 0 10px 10px 0;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border 0.3s ease;
+  
+}
+
+
+input[type="number"]:focus, select:focus {
+    border-color: #af4261;
+    outline: none;
+}
+.convertButton{
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    color: white;
+    padding: 14px 0;
+}
+.convertButton:hover{
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+.resultDisplay{
+    margin-top: 18px;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+@media(max-widht: 480px){
+    .Container{
+        padding: 20px; 
+    }
+    .Content h1{
+        font-size: 22px;
+    }
+    .converButton{
+        font-size: 16px;
+    }
+}
+
+.From,.To{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+img{
+    border: 2px solid #ddd;
+    height: 45.23px;
+    border-radius: 10px 0 0 10px;
+    background-color: linear-gradient(135deg, #f3ec78, #af4261);;
+    padding: 0 10px 0 10px;   
+}
+input[id='number']{
+    border-radius: 10px;
+}
